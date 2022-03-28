@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area{
+            
+            
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: green;
+            color: white;
+            font-size: 2em;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            line-height: 200px;
+            border: 2px dotted black;
+            border-radius: 20px;
+            box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.555);
+        }
+        section{
+        
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: green;
+            color: white;
+            font-size: 2em;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            line-height: 200px;
+            border: 2px dotted black;
+            border-radius: 20px;
+            box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.555);
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" ondblclick="clicar2()">
+        interaja... 
+    </div>
+    <section>
+        outros eventos
+    </section>
+
+    <script>
+        function clicar(){
+            var caixa=document.getElementById('area');
+            caixa.style.backgroundColor='red';
+            caixa.innerText ='cliquei';
+        }
+        function clicar2(){
+            var caixa=document.getElementById('area');
+            caixa.style.backgroundColor='green'
+            caixa.innerText='Interaja'
+        }
+    </script>
+</body>
+</html>

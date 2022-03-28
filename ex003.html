@@ -13,12 +13,28 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando os estudos DOM</h1>
+    <h1 id="titulo">Iniciando os estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>clique Aqui</p>
-    <div>teste</div>
+    <div class="secao">teste</div>
     <script>
-        
+        var p1 = document.getElementsByTagName('p')[0];
+        document.write(p1.innerText);
+        var corpo=document.body;
+       corpo.style.backgroundColor='lightgreen';
+        var texto = document.getElementsByTagName('div')[0];
+        texto.innerText = 'mudando o texto com JS';
+        p1.innerHTML = '<strong>funcionaaaaaaa!!!!!</strong>'
+        p1.style.color = 'black';
+        p1.style.backgroundColor = 'yellow';
+        p1.style.fontFamily = 'arial';
+        p1.style.border = '1px solid black';
+        p1.style.textAlign = 'center'
+        var h1=document.getElementById('titulo')
+        h1.innerText = h1.innerText +' estudando'
+        var q = document.querySelector('.secao') 
+        q.innerText = 'por seletor'
+      
     </script>
 
 </body>
