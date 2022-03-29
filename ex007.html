@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        section{
+            font: normal 18pt Arial;
+            text-align: center;
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            margin:auto;
+            background-color: rgba(0, 255, 255, 0.411);
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px black;
+        }
+                
+        section>input{
+            font: normal 18pt Arial;
+            width: 100px;
+            margin-bottom: 5px;
+        }
+        section>#res{
+            margin-top: 20px;
+        }
+        section>.op{
+            width: 30px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px black;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Calculadora</h1>
+        <input type="number" name="valor1" id="valor1"> 
+        <input type="number" name="valor2" id="valor2"><br>
+        <input type="button" value="+" onclick="somar()" class="op">
+        <input type="button" value="-" onclick="subtrair()" class="op">
+        <input type="button" value="x" onclick="multiplicar()" class="op">
+        <input type="button" value="/" onclick="dividir()" class="op">
+        <div id="res">
+            resultado
+        </div>
+    </section>
+    <script>
+           
+        function somar(){
+            var tn1=document.getElementById('valor1');
+            var tn2=document.querySelector('input#valor2');
+            var res=document.querySelector('#res')
+            var n1=Number(tn1.value);
+            var n2=Number(tn2.value);
+            var soma=n1+n2;
+            res.innerHTML=`A soma de ${n1} mais ${n2} é igual a <strong>${soma}</strong> `;
+        }
+        function subtrair(){
+             var tn1=document.getElementById('valor1');
+            var tn2=document.querySelector('input#valor2');
+            var res=document.querySelector('#res')
+            var n1=Number(tn1.value);
+            var n2=Number(tn2.value);
+            var menos=n1-n2;
+            res.innerHTML=`A subtração de ${n1} menos ${n2} é igual a <strong>${menos}</strong> `;
+        }
+        function multiplicar(){
+             var tn1=document.getElementById('valor1');
+            var tn2=document.querySelector('input#valor2');
+            var res=document.querySelector('#res')
+            var n1=Number(tn1.value);
+            var n2=Number(tn2.value);
+            var mult=n1*n2;
+            res.innerHTML=`A multiplicação de ${n1} vezes ${n2} é igual a <strong>${mult}</strong> `;
+        }
+        function dividir(){
+             var tn1=document.getElementById('valor1');
+            var tn2=document.querySelector('input#valor2');
+            var res=document.querySelector('#res')
+            var n1=Number(tn1.value);
+            var n2=Number(tn2.value);
+            if (n2==0) {
+                res.innerHTML=`impossível dividir! `; 
+            } else {
+                var div=n1/n2;
+                res.innerHTML=`A divisão de ${n1} dividido por ${n2} é igual a <strong>${div}</strong> `;
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

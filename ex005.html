@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
-        #area{
+        div{
                    
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
@@ -25,24 +25,34 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" ondblclick="clicar2()">
+    <div>
         interaja... 
     </div>
-  
+    
 
     <script>
+        var caixa=document.getElementsByTagName('div')[0];
+        caixa.addEventListener('click', clicar);
+        caixa.addEventListener('dblclick', clicar2);
+        caixa.addEventListener('mouseenter', entrar);
+        caixa.addEventListener('mouseout', sair)
+       
         function clicar(){
-            var caixa=document.getElementById('area');
+            
             caixa.style.backgroundColor='red';
             caixa.innerText ='cliquei';
         }
         function clicar2(){
-            var caixa=document.getElementById('area');
+            
             caixa.style.backgroundColor='green'
             caixa.innerText='Interaja'
         }
-      
-
+        function entrar(){
+            caixa.innerText='entrou';
+        }
+        function sair(){
+           caixa.innerText='saiu';
+        }
     </script>
 </body>
 </html>
