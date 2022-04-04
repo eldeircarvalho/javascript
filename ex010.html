@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case</title>
+  <style>
+      div{
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+    <input type="number" name="data" id="data">
+    <input type="button" value="ok" onclick="dia()">
+    <input type="button" value="hoje" onclick="diaatual()">
+<div>
+    dia da semana
+</div>
+<div>
+    
+</div>
+<script>
+function dia(){
+    var tdata=document.getElementById('data')
+    var data=Number(tdata.value)
+    switch (data){
+    case 0: 
+        document.getElementsByTagName('div')[0].innerText='Domingo'
+        break
+    case 1:
+        document.getElementsByTagName('div')[0].innerText='Segunda-feira'
+        break
+    case 2:
+        document.getElementsByTagName('div')[0].innerText='Terça-feira'
+        break
+    case 3:
+        document.getElementsByTagName('div')[0].innerText='Quarta-feira'
+        break
+    case 4:
+        document.getElementsByTagName('div')[0].innerText='Quinta-feira'
+        break
+    case 5: 
+        document.getElementsByTagName('div')[0].innerText='Sexta-feira'
+        break
+    case 6:
+        document.getElementsByTagName('div')[0].innerText='Sábado'
+        break
+    default:
+       document.getElementsByTagName('div')[0].innerText='ERRO, Dia Inválido!'
+        break
+    }    
+}
+function diaatual(){
+     var hoje=new Date().getDay()
+    switch (hoje){
+    case 0: 
+        document.getElementsByTagName('div')[1].innerText='Hoje é Domingo'
+        break
+    case 1:
+        document.getElementsByTagName('div')[1].innerText='Hoje é Segunda-feira'
+        break
+    case 2:
+        document.getElementsByTagName('div')[1].innerText='Hoje é Terça-feira'
+        break
+    case 3:
+        document.getElementsByTagName('div')[1].innerText='Hoje é Quarta-feira'
+        break
+    case 4:
+        document.getElementsByTagName('div')[1].innerText='Hoje é Quinta-feira'
+        break
+    case 5: 
+        document.getElementsByTagName('div')[1].innerText='Hoje é Sexta-feira'
+        break
+    case 6:
+        document.getElementsByTagName('div')[1].innerText='Hoje é Sábado'
+        break
+    default:
+       document.getElementsByTagName('div')[1].innerText='ERRO, Dia Inválido!'
+        break
+    } 
+
+
+}
+
+</script>
+
+</body>
+</html>
