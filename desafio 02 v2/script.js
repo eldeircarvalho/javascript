@@ -22,7 +22,7 @@ function verificar(){
             foto.setAttribute('src', 'imagens/bebe.jpg')
             
         }else if(idade<=15){
-            if (sexom.checked==true){
+            if (sexom.checked){
                 genero='Menino'
                 foto.setAttribute('src', 'imagens/menino.jpg')
 
@@ -31,7 +31,7 @@ function verificar(){
                 foto.setAttribute('src', 'imagens/menina.jpg')
             }
         }else if(idade<=25){
-            if (sexom.checked==true){
+            if (sexom.checked){
                 genero='Rapaz'
                 foto.setAttribute('src', 'imagens/rapaz.jpg')
             }else{
@@ -47,7 +47,7 @@ function verificar(){
                 foto.setAttribute('src', 'imagens/mulher.jpg')
             }
         }else if (idade>60){
-            if (sexom.checked==true){
+            if (sexom.checked){
                 genero='Senhor'
                 foto.setAttribute('src', 'imagens/idoso.jpg')
             }else{
